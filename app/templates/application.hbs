@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Merit-Money</h2>
 
-{{outlet}}
+{{#each letters as |letter|}}
+  {{hangman-letter letter=letter}}
+{{/each}}
+
+{{#if game.isWaiting}}
+  Would you like to play hangman?
+  {{input name='word' value=newWord insert-newline='playWord'}}
+{{else if game.isPlaying}}
+  Oh Buddy, you better guess this.
+{{else if game.isWinning}}
+  You are the man - you win!
+{{else if game.isLosing}}
+  You lost the game :-( Try once again)
+{{/if}}
