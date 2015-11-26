@@ -1,11 +1,17 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { describeComponent, it } from 'ember-mocha';
+import { expect } from 'chai';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('hangman-letter', 'Integration | Component | hangman letter', {
-  integration: true
-});
+describeComponent(
+  'hangman-letter',
+  'Integration | Component | hangman letter',
+  {integration: true},
+  function () {
 
-test('it renders', function(assert) {
-  this.render(hbs`{{hangman-letter letter='x'}}`);
-  assert.equal(this.$().text().trim(), 'x');
-});
+    it('renders', function () {
+      this.render(hbs`{{hangman-letter letter='x'}}`);
+
+      expect(this.$().text().trim()).to.equal('x');
+    });
+  }
+);
