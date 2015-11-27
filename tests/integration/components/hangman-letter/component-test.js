@@ -11,7 +11,8 @@ describeComponent(
     it('renders', function () {
       this.render(hbs`{{hangman-letter letter='x'}}`);
 
-      expect(this.$().text().trim()).to.equal('x');
+      expect(this.$().html()).to
+        .include('<span class="hangman-letter">\n  x\n</span>');
     });
   }
 );
