@@ -10,7 +10,7 @@ describe('HomePage', function () {
     visit('/');
 
     andThen(function () {
-      expect(find(':contains(Merit-Money)').length).to.be.ok;
+      expect(find(':contains(HangMan)').length).to.be.ok;
       expect(find('.hangman-letter:contains(z)').length).to.be.ok;
       expect(currentURL()).to.be.eq('/');
     });
