@@ -8,7 +8,7 @@ describeComponent(
   {integration: true},
   function () {
 
-    it('renders', function () {
+    it.skip('renders', function () {
       this.render(hbs`{{hangman-letter letter='x'}}`);
 
       expect(this.$().html()).to

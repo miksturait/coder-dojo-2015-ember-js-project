@@ -1,16 +1,1 @@
-<h2 id="title">HangMan</h2>
-
-{{#each letters as |letter|}}
-  {{hangman-letter letter=letter}}
-{{/each}}
-
-{{#if game.isWaiting}}
-  Would you like to play hangman?
-  {{input name='word' value=newWord insert-newline='playWord'}}
-{{else if game.isPlaying}}
-  Oh Buddy, you better guess this.
-{{else if game.isWinning}}
-  You are the man - you win!
-{{else if game.isLosing}}
-  You lost the game :-( Try once again)
-{{/if}}
+<h2 id="title">set title</h2>

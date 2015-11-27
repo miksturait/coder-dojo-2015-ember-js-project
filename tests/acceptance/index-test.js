@@ -16,7 +16,7 @@ describe('HomePage', function () {
     });
   });
 
-  it('allow to type word', function () {
+  it.skip('allow to type word', function () {
     visit('/');
     fillIn('input[name=word]', 'bob');
     keyEvent('input[name=word]', 'keyup', 13);
@@ -26,7 +26,7 @@ describe('HomePage', function () {
     });
   });
 
-  it('can win the game', function () {
+  it.skip('can win the game', function () {
     visit('/');
     fillIn('input[name=word]', 'bob');
     keyEvent('input[name=word]', 'keyup', 13);
@@ -39,7 +39,7 @@ describe('HomePage', function () {
     });
   });
 
-  it('can loose the game', function () {
+  it.skip('can loose the game', function () {
     visit('/');
     fillIn('input[name=word]', 'bob');
     keyEvent('input[name=word]', 'keyup', 13);
