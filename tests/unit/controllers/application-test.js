@@ -8,7 +8,7 @@ describeModule(
   {},
   function() {
 
-    it('exists', function(){
+    it.skip('exists', function(){
       let controller = this.subject();
       expect(controller).to.be.ok;
     });
