@@ -1,10 +1,9 @@
 <h1>Whom you would like to say 'thank you' today?</h1>
 
 <ul>
-    <li>{{link-to 'Wojtek' 'dashboard.index.coworker' 'w.ryrych'}}</li>
-    <li>{{link-to 'Irek' 'dashboard.index.coworker' 'i.skrobis'}}</li>
-    <li>{{link-to 'Tomek' 'dashboard.index.coworker' 't.noworyta'}}</li>
-    <li>{{link-to 'Michał' 'dashboard.index.coworker' 'm.czyz'}}</li>
+  {{#each model.coworkers as |coworker| }}
+      <li>{{link-to coworker.fullName 'dashboard.index.coworker' coworker}}</li>
+  {{/each}}
 </ul>
 
 {{outlet}}
