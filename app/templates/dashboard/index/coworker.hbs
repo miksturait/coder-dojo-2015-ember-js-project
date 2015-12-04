@@ -3,3 +3,12 @@
 <h3>nickname: {{model.nickname}}</h3>
 
 <img src={{model.avatarUrl}} />
+
+<h4>received kudos</h4>
+
+{{#each model.kudos as |kudo|}}
+    <li>
+        <strong>{{kudo.value}}</strong>
+        <i>{{kudo.comment}}</i>
+    </li>
+{{/each}}
