@@ -2,7 +2,14 @@
 
 <ul>
   {{#each model.coworkers as |coworker| }}
-      <li>{{link-to coworker.fullName 'dashboard.index.coworker' coworker}}</li>
+    {{#link-to 'dashboard.index.coworker' coworker}}
+        <li>
+            <strong>
+              ({{coworker.kudos_total_value}})
+            </strong>
+            {{coworker.fullName}}
+            </li>
+    {{/link-to}}
   {{/each}}
 </ul>
 

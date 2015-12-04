@@ -8,11 +8,15 @@ export default DS.Model.extend({
 
   kudos: DS.hasMany('kudo', {async: true}),
 
-  fullName: Ember.computed('firstName', 'lastName', function() {
+  fullName: Ember.computed('firstName', 'lastName', function () {
     return `${this.get('firstName')} ${this.get('lastName')}`;
   }),
 
-  nickname: Ember.computed('email', function() {
+  nickname: Ember.computed('email', function () {
     return this.get('email').split('@')[0];
+  }),
+
+  kudos_total_value: Ember.computed('kudos.@each.value', function () {
+    return this.get('kudos').reduce((a, b) => a + b.get('value'), 0);
   })
 });
