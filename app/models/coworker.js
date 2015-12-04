@@ -6,6 +6,8 @@ export default DS.Model.extend({
   lastName: DS.attr('string'),
   avatarUrl: DS.attr('string'),
 
+  kudos: DS.hasMany('kudo', {async: true}),
+
   fullName: Ember.computed('firstName', 'lastName', function() {
     return `${this.get('firstName')} ${this.get('lastName')}`;
   }),
