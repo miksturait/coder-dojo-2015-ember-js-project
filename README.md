@@ -10,6 +10,7 @@ You will need the following things properly installed on your computer.
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM)
 * `npm -g i ember-cli bower phantomjs` (that will install Bower, Ember CLI, PhantomJS)
+ver. sprint 1
 
 ## Installation
 
