@@ -1,6 +1,10 @@
 <h1>Whom you would like to say 'thank you' today?</h1>
 
 <ul>
+    <li>{{input value=include }}</li>
+</ul>
+
+<ul>
   {{#each model.coworkers as |coworker| }}
     {{#link-to 'dashboard.coworker' coworker}}
         <li>
