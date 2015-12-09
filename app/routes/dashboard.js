@@ -6,7 +6,7 @@ export default Ember.Route.extend({
       coworkers: this.store.queryRecord('coworker', {include: 'kudos'})
     });
   },
-  afterModel(model, transition) {
+  redirect(model, transition) {
     if (model.coworkers) {
       this.transitionTo('dashboard.coworker', model.coworkers.get('firstObject'));
     }
