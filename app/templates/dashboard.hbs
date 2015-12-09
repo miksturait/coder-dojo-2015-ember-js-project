@@ -1,7 +1,9 @@
 <h1>Whom you would like to say 'thank you' today?</h1>
 
 <ul>
-    <li>{{input value=include }}</li>
+    <li>{{ input value=name insert-newline='reload' }}</li>
+    <li>{{ input value=order insert-newline='reload' }}</li>
+    <li {{ action "reload" }}> Reload! </li>
 </ul>
 
 <ul>
@@ -14,6 +16,8 @@
             {{coworker.fullName}}
             </li>
     {{/link-to}}
+  {{else}}
+    Nobody here, try again
   {{/each}}
 </ul>
 

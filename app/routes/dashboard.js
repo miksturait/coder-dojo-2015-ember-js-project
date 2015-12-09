@@ -4,16 +4,22 @@ export default Ember.Route.extend({
   queryParams: {
     include: {
       refreshModel: true
-    }
+    },
+    name: {},
+    order: {}
   },
+
   model(params) {
     return Ember.RSVP.hash({
       coworkers: this.store.queryRecord('coworker', params)
     });
   },
-  redirect(model, transition) {
-    if (model.coworkers) {
-      this.transitionTo('dashboard.coworker', model.coworkers.get('firstObject'));
+
+  actions: {
+    reload() {
+      this.transitionTo('dashboard');
+      this.refresh();
     }
   }
-});
+})
+;
