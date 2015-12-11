@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
   this.route('dashboard', function () {
-    this.route('coworker', {path: 'coworker/:id'});
+    this.route('coworker', {path: 'coworker/:id'}, function() {
+      this.route('kudo-new');
+    });
   });
   this.route('about');
 });

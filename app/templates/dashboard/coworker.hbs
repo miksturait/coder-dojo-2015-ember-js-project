@@ -4,6 +4,11 @@
 
 <img src={{model.avatarUrl}} />
 
+{{link-to 'Add Kudo' 'dashboard.coworker.kudo-new' }}
+<div>
+  {{outlet}}
+</div>
+
 <h4>received kudos</h4>
 
 {{#each model.kudos as |kudo|}}
