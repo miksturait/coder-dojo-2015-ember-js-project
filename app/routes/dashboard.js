@@ -11,7 +11,7 @@ export default Ember.Route.extend({
 
   model(params) {
     return Ember.RSVP.hash({
-      coworkers: this.store.queryRecord('coworker', params)
+      coworkers: this.store.query('coworker', params)
     });
   },
 
