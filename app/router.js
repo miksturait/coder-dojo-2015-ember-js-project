@@ -12,6 +12,7 @@ Router.map(function() {
     });
   });
   this.route('about');
+  this.route('edziennik');
 });
 
 export default Router;
