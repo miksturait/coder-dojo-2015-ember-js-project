@@ -1,2 +1,8 @@
 <h2>Coworkers</h2>
+<ul>
+  {{#each model as |coworker| }}
+      <li>{{coworkers/navigation-element coworker=coworker}}</li>
+  {{/each}}
+</ul>
+
 {{outlet}}
