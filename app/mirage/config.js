@@ -1,5 +1,12 @@
 export default function() {
 
+  this.get('http://piotrs.cba.pl/Angular_JS/ajax/getdate.php', () => {
+   return [
+     { "databaseId": 39, "name": "Irek", "oceny": "6,5,5", "obecny": true},
+     { "databaseId": 41, "name": "Michał", "oceny": "6,5", "obecny": true},
+     { "databaseId": 40, "name": "Wojtek", "oceny": "5", "obecny": true}]
+  });
+
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
