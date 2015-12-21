@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  afterModel() {
-    this.transitionTo('coworkers');
-  }
+  //afterModel() {
+  //  this.transitionTo('coworkers');
+  //}
 });
