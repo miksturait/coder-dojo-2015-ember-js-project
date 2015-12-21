@@ -1,2 +1,18 @@
 <h2> E-Dziennik </h2>
-{{outlet}}
+<table>
+  <thead>
+    <tr>
+      <th>Imie i Nazwisko</th> 
+      <th>Obecność</th>
+      <th>Oceny</th>
+      <th>Dodaj Ocene</th>
+      <th>Usun Ucznia</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |uczen|}}
+      {{edziennik/uczen-row uczen=uczen}}
+    {{/each}}
+    {{outlet}}
+  </tbody>
+</table>
